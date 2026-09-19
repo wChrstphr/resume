@@ -5,6 +5,10 @@ Currículo de uma página, mantido em LaTeX para manter a formatação consisten
 **Christopher Paraizo** — Brasília, DF
 [LinkedIn](https://linkedin.com/in/christopherparaizo/) · [GitHub](https://github.com/wChrstphr)
 
+### Preview
+
+![Preview do currículo](resumes/preview.png)
+
 ### Estrutura
 
 ```
