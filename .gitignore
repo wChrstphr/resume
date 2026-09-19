@@ -17,3 +17,6 @@ Archieve/
 
 # github action result
 semicolon_delimited_script
+
+# Company-tailored resume variants (kept local, not published)
+resumes/tailored/
