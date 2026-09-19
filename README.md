@@ -9,11 +9,8 @@ Currículo de uma página, mantido em LaTeX para manter a formatação consisten
 
 ```
 resumes/
-  christopher_paraizo_resume.tex   # currículo genérico, versionado no git
-  tailored/                        # variantes customizadas por empresa, ignoradas pelo git (apenas local)
+  christopher_paraizo_resume.tex   # currículo, versionado no git
 ```
-
-Versões customizadas por empresa ficam em `resumes/tailored/` e são excluídas do controle de versão (ver `.gitignore`), então este repositório público sempre mostra apenas o currículo genérico.
 
 ### Build usando Docker
 
