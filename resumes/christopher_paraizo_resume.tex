@@ -1,0 +1,163 @@
+%-------------------------
+% Resume in LaTeX
+% Based on the "Jake's Resume" template by Sourabh Bajaj (MIT License)
+% Adapted for Christopher Paraizo
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[brazil]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small #1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeItemPlain}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Christopher Paraizo} & Brasília, DF \\
+  Email: \href{mailto:wanjo.christopher@gmail.com}{wanjo.christopher@gmail.com} & Mobile: \href{tel:+5561994156309}{+55 61 99415-6309} \\
+  \href{https://linkedin.com/in/christopherparaizo/}{linkedin.com/in/christopherparaizo} & \href{https://github.com/wChrstphr}{github.com/wChrstphr} \\
+\end{tabular*}
+
+%-----------EXPERIENCE-----------------
+\section{Experiência}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Presidência da República}{Brasília, DF}
+      {Coordenador de Projetos (anteriormente Chefe de Projeto e Estagiário em Eng. de Software)}{Fev. 2025 -- Presente}
+      \resumeItemListStart
+        \resumeItemPlain{Reduzi em 90\% o tempo de inscrição de Agentes de Veiculação no sistema MidiaCAD ao desenvolver automações em Python com PyAutoGUI e Playwright}
+        \resumeItemPlain{Eliminei a dependência de interface gráfica nas automações ao mapear requisições HTTP via packet sniffing, viabilizando integração direta com o backend do sistema-alvo}
+        \resumeItemPlain{Conduzi a migração de mais de 15 tabelas do sistema CredImprensa de Oracle on-premises para Oracle Cloud, coordenando uma equipe de 3 profissionais (DBA da minha área, DBA da área migrada e infraestrutura) sem impacto operacional}
+        \resumeItemPlain{Lidero uma equipe de 7 profissionais (devs sêniores, DBA, Scrum Master) no ciclo completo de engenharia do projeto ComunicaBr, reduzindo o tempo de resolução de impedimentos entre times técnicos}
+        \resumeItemPlain{Extraí e analisei dados via SQL em banco Oracle para apoiar decisões técnicas e de negócio, e desenvolvi KPIs em Power BI para acompanhamento de entregas}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {EletronJun -- Empresa Júnior de Eletrônica}{Brasília, DF}
+      {Diretor de Projetos / Gerente de Projetos de Software}{Jun. 2024 -- Jan. 2026}
+      \resumeItemListStart
+        \resumeItemPlain{Elevei em 30\% a taxa de entregas dentro do prazo ao definir e acompanhar KPIs de equipe com a metodologia SMART}
+        \resumeItemPlain{Reduzi de 8 para 4 semanas o tempo de onboarding em projetos internos ao estruturar um roadmap de capacitação técnica}
+        \resumeItemPlain{Geri 2 projetos simultâneos com equipes de 4 pessoas cada em projetos de software reais com cliente externo, aplicando Scrum/Kanban e ferramentas de gestão (ProjectLibre, Excel)}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%--------SKILLS------------
+\section{Habilidades Técnicas}
+  \resumeSubHeadingListStart
+    \item{
+      \textbf{Linguagens}{: Python, Java, C/C++, TypeScript, JavaScript, SQL} \\
+      \textbf{Bancos de Dados \& Infra}{: PostgreSQL, Oracle, Docker, Linux, Git/GitHub} \\
+      \textbf{Frameworks \& Ferramentas}{: Django, Node.js, Playwright, Power BI} \\
+      \textbf{IA \& Produtividade}{: Claude Code}
+    }
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projetos Acadêmicos}
+  \resumeSubHeadingListStart
+    \resumeSubItem{UnBTV}
+      {Levei ao ar em \href{https://unbtv.unb.br/}{unbtv.unb.br} uma arquitetura de 5 microsserviços (TypeScript/Node.js) para centralizar a comunicação institucional da UnB (eventos, palestras, canais), que antes não existia de forma unificada}
+    \resumeSubItem{Call of Cthulhu (Jogo)}
+      {Optei por um jogo, em vez de um CRUD comum, para lidar com eventos ao vivo e mudanças in-time no banco; implementei 24 triggers em PostgreSQL para automatizar a movimentação de entidades e garantir integridade transacional}
+    \resumeSubItem{Capital Nexus}
+      {Construí em Django para eliminar o controle manual de presença e materiais da equipe de competição Rocket Teams, permitindo que membros solicitassem itens faltantes diretamente na plataforma}
+    \resumeSubItem{Viés Judicial em Decisões sobre Medicamentos}
+      {Investigo se há viés de decisão por sexo da parte julgada na Justiça brasileira; processei 180 mil decisões sobre medicamentos (de 213 mil coletadas via API do CNJ) de 33 tribunais, com scrapers em Playwright e modelos de regressão em Python}
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Educação}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Universidade de Brasília}{Brasília, DF}
+      {Bacharelado em Engenharia de Software -- IRA: 4.0 (cursando)}{Out. 2022 -- Previsão 2028}
+  \resumeSubHeadingListEnd
+  \small \textbf{Idiomas}: Português (nativo) -- Inglês (avançado)
+
+%-------------------------------------------
+\end{document}
