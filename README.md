@@ -1,30 +1,35 @@
-A single-page, one-column resume for software developers. It uses the base latex templates and fonts to provide ease of use and installation when trying to update the resume. The different sections are clearly documented and custom commands are used to provide consistent formatting. The three main sections in the resume are education, experience, and projects.
+# Currículo — Christopher Paraizo
 
-Based on the "Jake's Resume" template originally created by Sourabh Bajaj (MIT License), adapted here for Christopher Paraizo.
+Currículo de uma página, mantido em LaTeX para manter a formatação consistente e evitar o trabalho manual de ajustar layout no Google Docs/Word a cada atualização. Baseado no template "Jake's Resume" criado por Sourabh Bajaj (MIT License).
 
-### Structure
+**Christopher Paraizo** — Brasília, DF
+[LinkedIn](https://linkedin.com/in/christopherparaizo/) · [GitHub](https://github.com/wChrstphr)
+
+### Estrutura
 
 ```
 resumes/
-  christopher_paraizo_resume.tex   # generic resume, tracked in git
-  tailored/                        # company-tailored variants, gitignored (local only)
+  christopher_paraizo_resume.tex   # currículo genérico, versionado no git
+  tailored/                        # variantes customizadas por empresa, ignoradas pelo git (apenas local)
 ```
 
-Company-tailored versions live under `resumes/tailored/` and are excluded from version control (see `.gitignore`) so this public repo only ever shows the generic resume.
+Versões customizadas por empresa ficam em `resumes/tailored/` e são excluídas do controle de versão (ver `.gitignore`), então este repositório público sempre mostra apenas o currículo genérico.
 
-### Build using Docker
+### Build usando Docker
 
 ```sh
 docker build -t latex .
 docker run --rm -i -v "$PWD":/data latex pdflatex -output-directory=resumes resumes/christopher_paraizo_resume.tex
 ```
 
-Or simply:
+Ou simplesmente:
 
 ```sh
 ./build.sh
 ```
 
+O PDF também é recompilado automaticamente via GitHub Actions a cada push na `master`.
+
 ### License
 
-Format is MIT; original template by Sourabh Bajaj. Resume content belongs to Christopher Paraizo.
+Formato MIT, template original de Sourabh Bajaj. O conteúdo do currículo pertence a Christopher Paraizo.
