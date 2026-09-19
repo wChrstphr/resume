@@ -1,26 +1,30 @@
 A single-page, one-column resume for software developers. It uses the base latex templates and fonts to provide ease of use and installation when trying to update the resume. The different sections are clearly documented and custom commands are used to provide consistent formatting. The three main sections in the resume are education, experience, and projects.
 
-### Motivation
+Based on the "Jake's Resume" template originally created by Sourabh Bajaj (MIT License), adapted here for Christopher Paraizo.
 
-I created this template as managing a resume on Google Docs was hard and changing any formatting was too difficult since it had to be applied in multiple places.
+### Structure
 
-Most currently available templates either focus on two columns, or are multiple pages long that didn't work well for career fairs or online applications.
+```
+resumes/
+  christopher_paraizo_resume.tex   # generic resume, tracked in git
+  tailored/                        # company-tailored variants, gitignored (local only)
+```
 
-### Quick start
-
-Get started quickly using [Overleaf](https://www.overleaf.com/latex/templates/software-engineer-resume/gqxmqsvsbdjf) template.
+Company-tailored versions live under `resumes/tailored/` and are excluded from version control (see `.gitignore`) so this public repo only ever shows the generic resume.
 
 ### Build using Docker
 
 ```sh
 docker build -t latex .
-docker run --rm -i -v "$PWD":/data latex pdflatex sourabh_bajaj_resume.tex
+docker run --rm -i -v "$PWD":/data latex pdflatex -output-directory=resumes resumes/christopher_paraizo_resume.tex
 ```
 
-### Preview
+Or simply:
 
-![Resume Screenshot](/resume_preview.png)
+```sh
+./build.sh
+```
 
 ### License
 
-Format is MIT but all the data is owned by Sourabh Bajaj.
+Format is MIT; original template by Sourabh Bajaj. Resume content belongs to Christopher Paraizo.
